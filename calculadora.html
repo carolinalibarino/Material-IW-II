@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Mundo</title>
+    <style>
+        body{
+            background-color: rgb(198, 143, 249);
+            color: beige;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exiba operações de dois números</h1>
+    
+    <script>
+        var num1= parseFloat(prompt('Digite o primeiro número:'))
+        var num2= parseFloat(prompt('Digite o segundo número:'))
+        var soma = num1+num2
+        var sub = num1-num2
+        var div = num1/num2
+        var mult = num1*num2
+
+        // alert('a soma é: ' + soma +
+        // '\nA subtração é: '+ sub +
+        // '\nA divisão é: ' + div +
+        // '\nA multiplicação é: '+ mult)
+
+        //\n serve para quebrar a linha
+        
+        console.log('A adição é,' , soma)
+        console.log(typeof(soma))
+        console.log('A subtração é, ' , sub)
+        console.log(typeof(sub))
+        console.log('A divisão é, ' , div)
+        console.log(typeof(div))
+        console.log('A multiplicação é, ' , mult)
+        console.log(typeof(mult))
+
+        // alert('A adição é, ' + soma)
+        // alert('A subtração é, ' + sub)
+        // alert('A divisão é, ' + div)
+        // alert('A multiplicação é, ' + mult)
+
+        //MOSTRANDO NA TELA DO NAVEGADOR (JANELA==>DOCUMENT)
+        document.writeln('<p> O primeiro número é ' + num1 + '</p>')
+        document.writeln('<p> O segundo número é ' + num2 + '</p>')
+        document.write ('<br>')
+        document.write(`A soma é  ${soma}, a subtração é ${sub}, a divisão é ${div} e a multiplicação é ${mult}`)
+
+        // INTERPOLAÇÃO DE VALORES - TEMPLATE STRING
+        // document.write(`num1 = ${num1} e num2 = ${num2}`)
+    </script>
+    
+</body>
+</html>

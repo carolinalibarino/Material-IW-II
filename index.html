@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+    <style>
+        body{
+            background-color: rgb(6, 83, 191);
+            color: aliceblue;
+            text-align: center;
+            font-size: 2rem;
+            border: 2cm;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Já me livrei da maldição</p>   
+    <script>
+        // alert('Minha primeira mensagem!')
+        // prompt('Digite seu nome:')
+        // confirm('Deseja realmente sair?')
+
+        //comentário simples
+        /*comentaios longos*/
+        /*declarar variavel como:
+        var==> global
+        let==>local ---- só funciona em uma função 
+        const==>constante ----- variaveis que não mudam, constantes
+        */
+
+        // var nome= 'CaCa'
+        // console.log('O nome é:'+ nome)
+
+        // , ou +
+
+        var nome= prompt('Digite seu nome:')
+        console.log('O nome é:' , nome)
+        console.log(typeof(nome))
+        alert('Bem vindo, ' + nome)
+        
+        
+        /* CONVERSÃO DE VALORES
+        parseInt() inteiro
+        parseFloat() decimal
+        parseString() pouco usado 
+        */
+
+        var idade= parseInt(prompt('Digite sua idade:'))
+        console.log('A idade é:' , idade)
+        console.log(typeof(idade))
+        alert('Sua idade é, ' + idade)
+        //PRECISA ESTAR INDENTADO PARA FUNCIONAR
+    </script>
+</body>
+</html>
