@@ -14,7 +14,7 @@ function estaquebrada(){
 
 }
 
-//teste botrão unico
+//teste botão unico
 
 function unicolig(){
     return lampada.src.indexOf('ligada') > -1
@@ -59,6 +59,14 @@ function botaounicolig(){
 
 }
 
+function botaounicolig(){
+    lampada.src = "img/ligada.jpg"
+}
+
+function botaounicodeslig(){
+    lampada.src = "img/desligada.jpg"
+}
+
 function botaounicodeslig(){
     if(!unicodeslig()){
         lampada.src = "img/desligada.jpg"
@@ -73,6 +81,7 @@ restaurar.addEventListener('click',lamprestaurar)
 lampada.addEventListener('mouseover',lampligada)
 lampada.addEventListener('mouseleave',lampdesligada)
 lampada.addEventListener('dblclick',lampquebrada)
+   
 
 //teste botão unico
 
