@@ -8,6 +8,8 @@ const lampada = document.getElementById('lamp')
 
 const unico = document.getElementById('unico')
 
+const texto = document.getElementById ('texto')
+
 function estaquebrada(){
     return lampada.src.indexOf('quebrada') > -1
     //isso retorna true ou false
@@ -28,6 +30,7 @@ function unicodeslig(){
 function lampligada(){
     if(!estaquebrada()){
         lampada.src = "img/ligada.jpg"
+        texto.innerHTML = "A lâmpada está ligada"
     }
 
 }
@@ -35,12 +38,14 @@ function lampligada(){
 function lampdesligada(){
     if(!estaquebrada()){
         lampada.src = "img/desligada.jpg"
+        texto.innerHTML = "A lâmpada está desligada"
     }
 
 }
 
 function lampquebrada(){
     lampada.src = "img/quebrada.jpg"
+    texto.innerHTML = "A lâmpada está quebrada"
 }
 
 function lamprestaurar(){
