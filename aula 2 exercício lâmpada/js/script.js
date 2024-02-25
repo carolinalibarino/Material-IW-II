@@ -51,6 +51,7 @@ function lampquebrada(){
 function lamprestaurar(){
     if(estaquebrada()){
         lampada.src = "img/desligada.jpg"
+        texto.innerHTML = "desligada"
     }
 
 }
