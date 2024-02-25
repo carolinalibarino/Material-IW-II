@@ -30,7 +30,7 @@ function unicodeslig(){
 function lampligada(){
     if(!estaquebrada()){
         lampada.src = "img/ligada.jpg"
-        texto.innerHTML = "A lâmpada está ligada"
+        texto.innerHTML = "ligada"
     }
 
 }
@@ -38,14 +38,14 @@ function lampligada(){
 function lampdesligada(){
     if(!estaquebrada()){
         lampada.src = "img/desligada.jpg"
-        texto.innerHTML = "A lâmpada está desligada"
+        texto.innerHTML = "desligada"
     }
 
 }
 
 function lampquebrada(){
     lampada.src = "img/quebrada.jpg"
-    texto.innerHTML = "A lâmpada está quebrada"
+    texto.innerHTML = "quebrada"
 }
 
 function lamprestaurar(){
@@ -66,15 +66,18 @@ function botaounicolig(){
 
 function botaounicolig(){
     lampada.src = "img/ligada.jpg"
+    texto.innerHTML = "ligada"
 }
 
 function botaounicodeslig(){
     lampada.src = "img/desligada.jpg"
+    texto.innerHTML = "ligada"
 }
 
 function botaounicodeslig(){
     if(!unicodeslig()){
         lampada.src = "img/desligada.jpg"
+        texto.innerHTML = "desligada"
     }
 }
 
