@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(202, 166, 236);
+}
+
+h1{
+    text-align: center;
+
+}
+
+.inicio{
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+.divcalculadora{
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+button{
+    border-radius: 12px;
+    border-color: blueviolet;
+}
