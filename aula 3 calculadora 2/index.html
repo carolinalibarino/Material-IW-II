@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Aula 3</title>
+</head>
+<body>
+    <h1>Exemlo valor Input</h1>
+    <div class="inicio">
+        Digite seu nome: 
+        <input id="nome" name="nome" value="" type="text">
+        <button id="botão" onclick="peganome()">Clique aqui</button>
+        <p id="resultado">Aqui vai aparecer seu nome</p>
+    </div>
+
+    <div class="divcalculadora">
+        Digite o primeiro número:
+        <input id="num1" name="num1" value="" type="text">
+        <button id="botãonum1" onclick="peganum1()">Enviar</button>
+        <br>
+        <br>
+        Digite o segundo número:
+        <input id="num2" name="num2" value="" type="text">
+        <button id="botãonum2" onclick="peganum2()">Enviar</button>
+        <br>
+        <br>
+        Escolha a operação:
+         <button id="soma" onclick="soma()">Somar</button>
+         <button id="sub" onclick="sub()">Subtrair</button>
+         <button id="mult" onclick="mult()">Multiplicar</button>
+         <button id="div" onclick="div()">Dividir</button>
+         <h2>O resultado é:</h2>
+         <h2 id="result"></h2>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
