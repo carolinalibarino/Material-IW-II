@@ -1,5 +1,3 @@
-const restaurar = document.getElementById('restaurar')
-
 
 function transformar(){
     var valor_originalalt = document.getElementById ("altura").value;
@@ -13,10 +11,50 @@ function transformar(){
     var imc = valor_novopeso/(valor_novoalt*valor_novoalt)
 
     document.getElementById("resultado").innerHTML = imc;
+    //document.getElementById("diag").innerHTML = diag;
+
+}
+
+
+function mascimc() {
+    if (imc < 20.0) {
+        diag.innerHTML = 'Abaixo do normal'
+    }
+    else if (imc < 24.9 && imc > 20.0) {
+        diag.innerHTML = 'Normal'
+    }
+    else if (imc > 25.0 && imc < 29.9) {
+        diag.innerHTML = 'Obesidade Leve'
+    }
+    else if (imc < 39.9 && imc > 30.0) {
+        diag.innerHTML = 'Obesidade  Moderada'
+    }
+    else (imc > 39.9); {
+        diag.innerHTML = 'Obesidade Mórbida'
+    }
+}
+
+
+function femimc() {
+    if (imc < 19.0) {
+        diag.innerHTML = 'Abaixo do normal'
+    }
+    else if (imc < 23.9 && imc > 19.0) {
+        diag.innerHTML = 'Normal'
+    }
+    else if (imc > 24.0 && imc < 28.9) {
+        diag.innerHTML = 'Obesidade Leve'
+    }
+    else if (imc < 38.9 && imc > 29.0) {
+        diag.innerHTML =  'Obesidade  Moderada'
+    }
+    else (imc > 38.9); {
+        diag.innerHTML = 'Obesidade Mórbida'
+    }
 }
 
 function classificarIMC(sexo, imc) {
-    if (sexo === "masculino") {
+    if (sexo == "masculino") {
         return mascimc(imc);
     } else {
         return femimc(imc);
@@ -24,40 +62,10 @@ function classificarIMC(sexo, imc) {
 }
 
 
-function mascimc() {
-    if (imc < 20.0) {
-        return "Abaixo do normal"
-    }
-    else if (imc < 24.9 && imc > 20.0) {
-        return "Normal"
-    }
-    else if (imc > 25.0 && imc < 29.9) {
-        return "Obesidade Leve"
-    }
-    else if (imc < 39.9 && imc > 30.0) {
-        return "Obesidade  Moderada"
-    }
-    else (imc > 39.9); {
-        return "Obesidade Mórbida "
-    }
+function restaurar(){
+    peso.value = ''
+    altura.value = ''
+    resultado.innerHTML = ''
+    diag.innerHTML = ''
+    sexo.value = ''
 }
-
-
-function femimc() {
-    if (imc < 19.0) {
-        return "Abaixo do normal"
-    }
-    else if (imc < 23.9 && imc > 19.0) {
-        return "Normal"
-    }
-    else if (imc > 24.0 && imc < 28.9) {
-        return "Obesidade Leve"
-    }
-    else if (imc < 38.9 && imc > 29.0) {
-        return "Obesidade  Moderada"
-    }
-    else (imc > 38.9); {
-        return "Obesidade Mórbida"
-    }
-}
-
