@@ -22,38 +22,42 @@ function classificarIMC(sexo, imc) {
         return femimc(imc);
     }
 }
-function mascimc(){
-    if (imc<20.0){
+
+
+function mascimc() {
+    if (imc < 20.0) {
         return "Abaixo do normal"
     }
-    else if (imc<24.9 && imc>20.0){
+    else if (imc < 24.9 && imc > 20.0) {
         return "Normal"
     }
-    else if(imc>25.0 && imc<29.9){
+    else if (imc > 25.0 && imc < 29.9) {
         return "Obesidade Leve"
     }
-    else if (imc<39.9 && imc>30.0){
+    else if (imc < 39.9 && imc > 30.0) {
         return "Obesidade  Moderada"
     }
-    else(imc>39.9){ 
+    else (imc > 39.9); {
         return "Obesidade Mórbida "
     }
 }
 
-function femimc(){
-    if (imc<19.0){
+
+function femimc() {
+    if (imc < 19.0) {
         return "Abaixo do normal"
     }
-    else if (imc<23.9 && imc>19.0){
+    else if (imc < 23.9 && imc > 19.0) {
         return "Normal"
     }
-    else if(imc>24.0 && imc<28.9){
+    else if (imc > 24.0 && imc < 28.9) {
         return "Obesidade Leve"
     }
-    else if (imc<38.9 && imc>29.0){
+    else if (imc < 38.9 && imc > 29.0) {
         return "Obesidade  Moderada"
     }
-    else(imc>38.9){
+    else (imc > 38.9); {
         return "Obesidade Mórbida"
     }
 }
+
