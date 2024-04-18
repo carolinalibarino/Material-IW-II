@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7 - Validação de formulários</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/jquery.validate.min.js">
+    <link rel="stylesheet" href="js/script.js">
+
+    <script type="text/javascript">
+		
+        jQuery.validator.addMethod("arrobaNoInicio", function(value, element){
+            if (value.indexOf("@") == 0){
+                return true
+            }else{
+                return false
+            }
+        }, "Tem que ter arroba no começo")
+    
+        $(document).ready(function(){
+            $("#formCadastro").validate({
+                rules:{
+                    nome: {
+                        required: true,
+                        maxlength: 100,
+                        minlength: 10,
+                        minWords: 2
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    cidade: {
+                        required: true
+                    },
+                    idade: {
+                        required: true,
+                        min: 1,
+                        max: 120
+                    },
+                    instagram: {
+                        arrobaNoInicio: true
+                    }
+                },
+                submitHandler: function(form){
+                    alert("Sucessoooooooooo")						
+                }
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <h1>Validação de formulários</h1>
+    
+</body>
+</html>
