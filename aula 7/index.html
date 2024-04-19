@@ -56,6 +56,37 @@
 </head>
 <body>
     <h1>Validação de formulários</h1>
-    
+    <div class="container">
+        <form name="formCadastro" id="formCadastro" method="post">
+            <div class="row">
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control" />
+            </div>
+            <div class="row">
+                <label>E-mail</label>
+                <input type="email" name="email" id="email" class="form-control" />
+            </div>				
+            <div class="row">
+                <label>Cidade</label>
+                <select name="cidade" id="cidade" class="form-control">
+                    <option value="">----</option>
+                    <option value="Ribeirão Pires">Ribeirão Pires</option>
+                    <option value="Maua">Maua</option>
+                    <option value="Santo André">Santo André</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>Idade</label>
+                <input type="number" name="idade" id="idade" class="form-control" />
+            </div>
+            <div class="row">
+                <label>Instagram</label>
+                <input type="text" name="instagram" id="instagram" class="form-control" />
+            </div>
+            <div class="row">
+                <input type="submit" name="enviar" id="enviar" class="btn btn-primary form-control" />
+            </div>
+        </form>
+    </div>
 </body>
 </html>

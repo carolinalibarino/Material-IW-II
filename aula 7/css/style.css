@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(192, 125, 255);
+}
+
+.row{
+    padding-top: 2%;
+}
+
+.container{
+    box-sizing: border-box;
+    border-radius: 3%;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    
+}
