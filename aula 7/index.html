@@ -44,7 +44,15 @@
                     },
                     instagram: {
                         arrobaNoInicio: true
-                    }
+                    },
+                    rg: {                        
+                        required: true                    
+                    },
+                    telefone: {
+                        required: true,
+                        min: 18,
+                        max: 20
+                    },
                 },
                 submitHandler: function(form){
                     alert("Sucessoooooooooo")						
@@ -82,6 +90,14 @@
             <div class="row">
                 <label>Instagram</label>
                 <input type="text" name="instagram" id="instagram" class="form-control" />
+            </div>
+            <div class="row">
+                <label>RG</label>
+                <input type="text" name="rg" id="rg" class="form-control" />
+            </div>
+            <div class="row">
+                <label>Telefone</label>
+                <input type="text" name="telefone" id="telefone" class="form-control" />
             </div>
             <div class="row">
                 <input type="submit" name="enviar" id="enviar" class="btn btn-primary form-control" />
