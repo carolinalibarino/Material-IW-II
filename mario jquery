@@ -1,0 +1,43 @@
+$(document).ready(function() {
+    const $mario = $('.mario');
+    const $pipe = $('.pipe');
+    const $clouds = $('.clouds');
+
+    const jump = () => {
+        $mario.addClass('jump');
+
+        setTimeout(() => {
+            $mario.removeClass('jump');
+        }, 500);
+    };
+
+    const loop = setInterval(() => {
+        const pipePosition = $pipe.offset().left;
+        const marioPosition = parseInt($mario.css('bottom'));
+        const cloudsPosition = $clouds.offset().left;
+
+        if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
+            $pipe.css({
+                'animation': 'none',
+                'left': `${pipePosition}px`
+            });
+
+            $mario.css({
+                'animation': 'none',
+                'bottom': `${marioPosition}px`,
+                'src': './img/game-over.png',
+                'width': '75px',
+                'marginLeft': '50px'
+            });
+
+            $clouds.css({
+                'animation': 'none',
+                'left': `${cloudsPosition}px`
+            });
+
+            clearInterval(loop);
+        }
+    }, 10);
+
+    $(document).on('keydown touchstart', jump);
+});
